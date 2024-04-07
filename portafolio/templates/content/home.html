@@ -2,8 +2,56 @@
 
 {% block content %}
 {% load static %}
+<style>
+    /* Anular el efecto hover */
+    input[type="text"]:hover {
+        border-color: transparent;
+        box-shadow: none;
+    }
 
-<dic class="container-fluid">
+    /* Definir el borde al hacer clic */
+    input[type="text"]:focus {
+        border-color: transparent;
+        box-shadow: none;
+    }
+</style>
+
+<main class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2 d-column border mt-3 text-center">
+           <div class="col">
+            <img class="rounded-circle" style="width: 10rem;" src="https://avatars.githubusercontent.com/u/83799877?v=4" alt="">
+           </div>
+
+            <div class="col mt-3">
+                <h1>Hey! soy Marlon cuartas, Desarrollador back-end.</h1>
+            </div>
+
+            <div class="col text-start mt-3">
+                Desarrollador back-end, comprometido con el crecimiento personal y orientado a la creación de productos de software para la educación y el emprendimiento, con el objetivo de impulsar el desarrollo e innovación tecnológica en LATAM.
+            </div>
+
+            <div class="col text-start mt-3">
+                Ver cv
+                <a class="btn btn-outline-secondary border-0 ms-1" href="https://drive.google.com/file/d/17xFOzGoBg8cfhl4MD56Z7rNj_j-DaWzZ/view?usp=sharing"><i class="fa-regular fa-eye"></i></a>
+            </div>
+
+            <div class="col my-2 " style="margin-left: -0.7rem;">
+                <div class="col-4 input-group">
+                    <input id="emailInput" type="text" class="form-control pe-1 border border-0" value="cuartasm844@gmail.com" readonly>
+                    <button id="copyEmailBtn" class="btn btn-outline-secondary border-0 rounded-2" type="button" data-bs-toggle="popover" data-bs-placement="bottom"><i class="fa-solid fa-copy"></i></button>
+                </div>
+            </div>
+            
+
+        </div>
+    </div>
+</main>
+
+
+
+
+<!-- <dic class="container-fluid">
     <div class="row">
         <div class="col d-flex">
             <div class="col-2" style="margin-top: 5rem;">
@@ -56,6 +104,6 @@
             </div>
         </div>
     </div>
-</dic>
+</dic> -->
 
 {% endblock %}
