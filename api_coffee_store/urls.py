@@ -9,7 +9,7 @@ router = routers.DefaultRouter()
 router.register('api/products', ProductViewSet, 'products')
 
 urlpatterns = [
-    path('', views.api_root),
+    path('', views.api_root, name='home_api_coffee_store'),
     path('users/', views.UserList.as_view(), name='user-list'),
     path('users/<int:pk>/', views.UserDetail.as_view(), name='user-detail'),
     path('products/', views.ProductList.as_view(), name='product-list'),

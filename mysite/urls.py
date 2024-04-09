@@ -16,10 +16,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from portafolio import views
+from portafolio import views as portafolio
+from blog import views
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name='home'),
-    path('api_coffee_store/', include('api_coffee_store.urls'))
+    path('portafolio/', portafolio.portafolio, name='portafolio'),
+    # api coffee store
+    path('api_coffee_store/', include('api_coffee_store.urls')),
+    # blog
+    path('create_post/', views.model_form_view, name='create_post'),
+    path('detail/<int:quillpost_id>/', views.quillpost_detail, name="detail"),
+    path('show_all_posts/', views.show_all_post, name='show_all_posts'),
 ]
