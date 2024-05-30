@@ -1,6 +1,6 @@
-from rest_framework import routers
+from rest_framework import routers # type: ignore
 from api_coffee_store import views
-from django.urls import path, include
+from django.urls import path, include # type: ignore
 from .api import ProductViewSet
 
 router = routers.DefaultRouter()

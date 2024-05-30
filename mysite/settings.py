@@ -44,7 +44,14 @@ INSTALLED_APPS = [
     'rest_framework',
     'blog',
     'django_quill',
+    'login',
+    'crispy_forms',
+    'crispy_bootstrap5',
 ]
+
+# Crispy forms
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -61,7 +68,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'blog/templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -135,3 +142,17 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10
 }
+
+# login
+# url para profile
+LOGIN_REDIRECT_URL = 'profile'
+
+# Recuperación de contraseña
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'may.oficial.portafolio@gmail.com'  # Reemplaza con tu email
+EMAIL_HOST_PASSWORD = 'obwnltrlfvfsxwql'    # Reemplaza con tu contraseña de email
+
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
