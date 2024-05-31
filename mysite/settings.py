@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'mysite',
     'portafolio',
     'api_coffee_store',
+    'drf_redesign',
     'rest_framework',
     'blog',
     'django_quill',
