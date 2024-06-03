@@ -1,2 +1,5 @@
-db.sqlite3
+
 info.txt
+db.sqlite3
+venv
+__pycache__
