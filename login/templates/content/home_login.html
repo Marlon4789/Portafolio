@@ -13,9 +13,9 @@
                 </div>
                 <div class="col-12 text-center my-3">
                     {% if request.user.is_authenticated %}
-                        <a class="btn btn-success col-3" href="{% url 'profile' %}">Comenzar</a>
+                        <a class="btn btn-success" href="{% url 'profile' %}">Comenzar</a>
                     {% else %}
-                        <a class="btn btn-success col-3" href="{% url 'login' %}">Iniciar sesión</a>
+                        <a class="btn btn-success" href="{% url 'login' %}">Iniciar sesión</a>
                     {% endif %}
                 </div>
             </div>
