@@ -167,4 +167,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # variable de white noise
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-CSRF_TRUSTED_ORIGINS = 'https://web-production-b7cf.up.railway.app'
+CSRF_TRUSTED_ORIGINS = ['https://web-production-b7cf.up.railway.app']
