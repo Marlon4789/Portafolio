@@ -1,5 +1,6 @@
 
 info.txt
-db.sqlite3
 venv
 __pycache__
+staticfiles
+db.sqlite3

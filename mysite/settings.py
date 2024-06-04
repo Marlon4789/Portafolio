@@ -161,6 +161,10 @@ EMAIL_HOST_PASSWORD = 'obwnltrlfvfsxwql'    # Reemplaza con tu contraseña de em
 
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
+# staticfile
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 # variable de white noise
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
 CSRF_TRUSTED_ORIGINS = 'https://web-production-b7cf.up.railway.app'
