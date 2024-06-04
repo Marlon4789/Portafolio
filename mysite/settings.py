@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 import dj_database_url
 from dotenv import load_dotenv
+from decouple import config
 import os
 
 load_dotenv()
@@ -158,9 +159,11 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'may.oficial.portafolio@gmail.com'  # Reemplaza con tu email
-EMAIL_HOST_PASSWORD = 'obwnltrlfvfsxwql'    # Reemplaza con tu contraseña de email
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+
 
 # staticfile
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
