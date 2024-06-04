@@ -163,3 +163,4 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 # variable de white noise
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+CSRF_TRUSTED_ORIGINS = 'https://web-production-b7cf.up.railway.app'
