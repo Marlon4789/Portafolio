@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'whitenoise.runserver_nostatic',
     'mysite',
     'portafolio',
     'api_coffee_store',
@@ -57,6 +58,7 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -158,3 +160,6 @@ EMAIL_HOST_USER = 'may.oficial.portafolio@gmail.com'  # Reemplaza con tu email
 EMAIL_HOST_PASSWORD = 'obwnltrlfvfsxwql'    # Reemplaza con tu contraseña de email
 
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+# variable de white noise
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
