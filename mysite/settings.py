@@ -32,7 +32,7 @@ SECRET_KEY = 'django-insecure-4*po-e=xk=rf%y+4q#6_kj5l5)&egnxhtw(z3-!_fwc0j&fmnu
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.marlon-cuartas-dev.com','127.0.0.1:8000','localhost']
+ALLOWED_HOSTS = ['www.marlon-cuartas-dev.com','127.0.0.1','localhost']
 
 
 # Application definition
@@ -169,5 +169,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # variable de white noise
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-CSRF_TRUSTED_ORIGINS = ['https://web-production-b7cf.up.railway.app']
+CSRF_TRUSTED_ORIGINS = [
+    'https://web-production-b7cf.up.railway.app',
+    'https://marlon-cuartas-dev.com',
+    'https://www.marlon-cuartas-dev.com'
+    ]
 
