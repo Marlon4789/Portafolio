@@ -97,7 +97,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 # print(os.getenv('DATABASE_URL'))
 DATABASES = {
-    'default': dj_database_url.config(default=os.getenv('DATABSE_URL'))
+    'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
 }
 
 
@@ -172,6 +172,9 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 CSRF_TRUSTED_ORIGINS = [
     'https://web-production-b7cf.up.railway.app',
     'https://marlon-cuartas-dev.com',
-    'https://www.marlon-cuartas-dev.com'
+    'https://www.marlon-cuartas-dev.com',
+
+    'http://127.0.0.1',
+    'http://localhost',
     ]
 
